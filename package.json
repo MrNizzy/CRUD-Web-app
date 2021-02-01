@@ -1,0 +1,16 @@
+{
+  "name": "prueba-crud-con-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MrNizzy",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "normalize.css": "^8.0.1"
+  }
+}
