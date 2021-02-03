@@ -16,6 +16,18 @@
     </div>
 
     <div class="container mt-5">
+        <div class="card">
+            <div class="card-header pt-4 px-5 roboto">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item color-claro" aria-current="page"><i class="fas fa-home"></i> Inicio</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
         <div class="card text-center">
             <div class="card-header">
                 Introducción
