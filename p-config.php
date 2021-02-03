@@ -25,14 +25,28 @@
             </div>
         </div>
     </div>
-
-    <form action="" class="historial-cli container roboto">
-        <div class="foto-perfil">
+    <div class="container">
+        <div class="foto-perfil shadow-web mt-5">
             <img src="assets/image/paw.svg" alt="Foto perfil" width="150px">
-        </div> 
-        <div class="mb-3 mt-5 form-floating">
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario" required>
-            <label for="formGroupExampleInput" class="form-label">Nombre de usuario</label>
+        </div>
+    </div>
+    <form action="" class="historial-cli container roboto mb-4">
+        <div>
+            <h1 class="text-center">Configuración de la cuenta</h1>
+        </div>
+        <div class="row mb-3 mt-5">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario" required>
+                    <label for="formGroupExampleInput" class="form-label">Nombre de usuario</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input type="text" class="form-control p-3" placeholder="admin@mail.com" aria-label="Username" aria-describedby="addon-wrapping" disabled>
+                </div>
+            </div>
         </div>
         <div class="row mb-5">
             <div class="col-md">
@@ -48,8 +62,8 @@
                 </div>
             </div>
         </div>
-        <div class="d-grid gap-2 mt-5">
-            <button class="btn btn-primary btn-lg" type="submit">Guardar cambios</button>
+        <div class="d-grid gap-2 col-3 mx-auto mt-5">
+            <button class="btn btn-outline-main btn-lg" type="submit"><i class="fas fa-save"></i> Guardar cambios</button>
         </div>
     </form>
 
