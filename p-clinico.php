@@ -60,7 +60,7 @@
                         <td>+57 31012345678</td>
                         <td class="mx-auto" style="width: 200px;">
                             <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="submit">Eliminar</button>
+                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
@@ -69,7 +69,7 @@
                         <td>+57 3202556060</td>
                         <td>
                             <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="submit">Eliminar</button>
+                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
                         </td>
                     </tr>
                     <tr>
@@ -78,7 +78,7 @@
                         <td>+57 3163002020</td>
                         <td>
                         <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="submit">Eliminar</button>
+                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>

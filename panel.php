@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <?php
     require_once('assets/layout/head.php')
     ?>
-    <title>Document</title>
+    <title>Inicio</title>
 </head>
 
 <body>

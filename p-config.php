@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 col-3 mx-auto mt-5">
-            <button class="btn btn-outline-main btn-lg" type="submit"><i class="fas fa-save"></i> Guardar cambios</button>
+            <button class="btn btn-outline-main btn-lg" type="submit" onclick="configSuccess()"><i class="fas fa-save"></i> Guardar cambios</button>
         </div>
     </form>
 

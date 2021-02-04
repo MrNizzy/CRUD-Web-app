@@ -96,7 +96,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-outline-main">Guardar</button>
+                <button type="button" onclick="SaveSuccess()" class="btn btn-outline-main" data-bs-dismiss="modal">Guardar</button>
             </div>
         </div>
     </div>
