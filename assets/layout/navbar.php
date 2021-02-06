@@ -1,7 +1,7 @@
-<nav class="navbar fixed-top roboto navbar-expand-md px-5 navbar-light bg-light text-primary">
+<nav class="navbar fixed-top roboto-nav navbar-expand-md px-5 navbar-light bg-light text-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset=""
-                width="30" height="30"></a>
+        <a class="navbar-brand" style="padding-left: 2rem;" href="#"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset=""
+                width="35" height="35"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                     </ul>
                 </li>
             </ul>
-            <div class="d-flex">
+            <div class="d-flex" style="padding-right: 2rem;">
                 <li class="navbar-nav nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,7 +46,7 @@
     </div>
 </nav>
 
-<div style="height: 3rem;">
+<div style="height: 4rem;">
 </div>
 
 <!-- Modal -->

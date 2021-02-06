@@ -9,6 +9,12 @@ body {
   text-decoration: none;
 }
 
+.navbar {
+  padding: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
 .scrollbar {
   overflow: hidden;
 }
@@ -16,6 +22,18 @@ body {
 .roboto {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+}
+
+.roboto-nav {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.roboto-sm {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #5e83a8;
 }
 
 .historial-cli {
