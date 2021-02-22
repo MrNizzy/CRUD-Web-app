@@ -1,0 +1,33 @@
+.btn {
+    outline: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #5e83a8;
+    border-color: #5e83a8;
+}
+.btn-primary:hover {
+    background-color: #2f4154;
+    border-color: #2f4154;
+}
+.btn-outline-main {
+    background-color: none;
+    border-color: #5e83a8;
+    color: #5e83a8;
+}
+.btn-outline-main:hover {
+    background-color: #5e83a8;
+    border-color: #5e83a8;
+    color: #fff;
+}
+.btn-invitado {
+    font-size: small;
+    color: #fff;
+    background-color: #2f4154;
+    border-color: #2f4154;
+}
+.btn-invitado:hover {
+    background-color: #5e83a8;
+    border-color: #5e83a8;
+    color: #fff;
+}

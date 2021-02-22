@@ -8,7 +8,7 @@
     <title>Iniciar Sesión</title>
 </head>
 
-<body class="scrollbar">
+<body class="hidden__overflow">
     <?php
     require_once('assets/layout/preloader.php')
     ?>

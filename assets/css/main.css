@@ -28,25 +28,9 @@
           clip-path: circle(0% at 50% 50%);
 }
 
-body {
-  background-color: #8ec5fc;
-  color: #5e83a8;
-  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-}
-
 .color-claro {
   color: #5e83a8;
   text-decoration: none;
-}
-
-.navbar {
-  padding: 1rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-}
-
-.scrollbar {
-  overflow: hidden;
 }
 
 .roboto {
@@ -66,39 +50,9 @@ body {
   color: #5e83a8;
 }
 
-.historial-cli {
-  background-color: #fff;
-  border-radius: 0.5rem;
-  margin-top: 2em;
-  padding: 2rem;
-}
-
 .btn {
   outline: none;
   cursor: pointer;
-}
-
-.card-clr {
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-top: 2rem;
-  margin-bottom: auto;
-  color: #5e83a8;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.card-lr {
-  margin-left: auto;
-  margin-right: auto;
-  width: 15%;
-  margin-top: 4rem;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .btn-primary {
@@ -136,8 +90,59 @@ body {
   color: #fff;
 }
 
+.color-claro {
+  color: #5e83a8;
+  text-decoration: none;
+}
+
+.historial-cli {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 2em;
+  padding: 2rem;
+}
+
+.card-clr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: auto;
+  color: #5e83a8;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.card-lr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  margin-top: 4rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .main {
   margin-bottom: 13rem;
+}
+
+body {
+  background-color: #8ec5fc;
+  color: #5e83a8;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.navbar {
+  padding: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.hidden__overflow {
+  overflow: hidden;
 }
 
 .foto-perfil {
