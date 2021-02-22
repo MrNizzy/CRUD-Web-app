@@ -9,6 +9,9 @@
 </head>
 
 <body class="scrollbar">
+    <?php
+    require_once('assets/layout/preloader.php')
+    ?>
     <main class="main">
         <div>
             <div class="card-lr shadow-web">

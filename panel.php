@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <?php
+    require_once('assets/layout/preloader.php')
+    ?>
     <div class="roboto">
         <?php
         require_once('assets/layout/navbar.php')

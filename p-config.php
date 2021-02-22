@@ -10,6 +10,9 @@
 
 <body>
     <?php
+    require_once('assets/layout/preloader.php')
+    ?>
+    <?php
     require_once('assets/layout/navbar.php')
     ?>
 

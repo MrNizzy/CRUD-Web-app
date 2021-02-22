@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <?php
+    require_once('assets/layout/preloader.php')
+    ?>
 
     <?php
     require_once('assets/layout/navbar.php')
@@ -77,7 +80,7 @@
                         <td>Larry the Bird</td>
                         <td>+57 3163002020</td>
                         <td>
-                        <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
+                            <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
                             <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
                         </td>
                     </tr>
