@@ -32,19 +32,25 @@
 
     <div class="container historial-cli roboto mb-5">
         <h3 class="card-title text-center mb-5">Historial clínico de pacientes</h3>
-        <form class="d-flex gap-3">
-            <div class="input-group mb-2">
-                <span class="input-group-text color-claro" id="basic-addon1">Número de entradas</span>
-                <select class="form-select" aria-label="Default select example" style="width: 100px;">
-                    <option selected>-</option>
-                    <option value="1">5</option>
-                    <option value="2">10</option>
-                    <option value="3">20</option>
-                    <option value="4">Todas</option>
-                </select>
+        <form>
+            <div class="d-flex justify-content-around">
+                <div class="d-flex gap-3 align-items-center">
+                    <span class="color-claro" id="basic-addon1">Entradas </span>
+                    <select class="form-select historial-cli__select" aria-label="Default select example">
+                        <option selected>-</option>
+                        <option value="1">5</option>
+                        <option value="2">10</option>
+                        <option value="3">20</option>
+                        <option value="4">Todas</option>
+                    </select>
+                    <button class="btn btn-primary" type="submit">Aplicar</button>
+                </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <input class="form-control" type="search" placeholder="Buscar paciente" aria-label="Buscar">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                </div>
+                
             </div>
-            <input class="form-control mb-2" type="search" placeholder="Buscar paciente" aria-label="Buscar">
-            <button class="btn btn-primary mb-2" type="submit">Buscar</button>
         </form>
         <div class="table-responsive mt-3">
             <table class="table color-claro table-bordered">
@@ -53,7 +59,7 @@
                         <th scope="col">Nombre paciente</th>
                         <th scope="col">Nombre dueño</th>
                         <th scope="col">Teléfono contacto</th>
-                        <th scope="col"></th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>

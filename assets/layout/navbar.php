@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top roboto-nav navbar-expand-md px-5 navbar-light bg-light text-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" style="padding-left: 2rem;" href="#"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset=""
+        <a class="navbar-brand" style="padding-left: 2rem;" href="panel.php"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset=""
                 width="35" height="35"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
