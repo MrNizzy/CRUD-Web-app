@@ -21,7 +21,7 @@
 					$_SESSION['pet']=$_SESSION['pet'].'<tr>
                                 <th scope="row">'.$array['nombre']."</th>
                                 <td>".$array1['nombre']."</td>
-                                <td>".$_SESSION['dueno']['telefono']."</td>
+                                <td>".$array1['dueno']['telefono']."</td>
                                 <td class='mx-auto' style='width: 200px;'>
                             <button class='btn btn-outline-main mb-3' type='submit'>Modificar</button>
                             <button class='btn btn-outline-danger mb-3' type='button' onclick='eliminar()'>Eliminar</button>
