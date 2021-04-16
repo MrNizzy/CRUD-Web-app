@@ -33,6 +33,7 @@
                         </div>
                         <div class="d-grid gap-2 mx-auto">
                             <button class="btn btn-primary btn-lg" name="inicio">Iniciar sesión</button>
+                            <a href="registro.php" class="mt-2 text-center">¿No tienes cuenta? Regístrate</a>
                         </div>
                     </form>
                 </div>
