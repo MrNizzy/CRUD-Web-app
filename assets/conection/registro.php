@@ -5,36 +5,35 @@
 	$conex=Conectarse();
     if($conex==false){
     	echo("error");
-    }else{
-    	
-		$sentencia = "SELECT * from owner where id  = '$busqueda'";
+    }else{    	
+    	$sentencia = "SELECT * from owner";
     	$consulta = mysqli_query($conex, $sentencia);
-		$array1 = mysqli_fetch_array($consulta);
-		if(mysqli_num_rows($consulta) > 0){
-			$sentencia = "SELECT * from mascotas where id_owner  = '$busqueda'";
-    		$consulta = mysqli_query($conex, $sentencia);
-			//$array = mysqli_fetch_array($consulta);
-			$cantidad=mysqli_num_rows($consulta);
-			if($cantidad > 0){
-				$_SESSION['pet']="";
-				while($row = $consulta->fetch_array()){
-					$_SESSION['pet']=$_SESSION['pet'].'<tr>
-                                <th scope="row">'.$row['nombre']."</th>
-                                <td>".$array1['nombre']."</td>
-                                <td>".$array1['telefono']."</td>
-                                <td class='mx-auto' style='width: 200px;'>
-                            <button class='btn btn-outline-main mb-3' type='submit'>Modificar</button>
-                            <button class='btn btn-outline-danger mb-3' type='button' onclick='eliminar()'>Eliminar</button>
-                        </td>";
-				}
-                        echo ($_SESSION['pet']);
-    			header("location: ../../p-clinico.php");
-			}else{
-				echo("Error");
-    		}
+		$_SESSION['pet']="";
+		if(mysqli_num_rows($consulta) > 0){			
+			while($dueno = $consulta->fetch_array()){
+				$busqueda=$dueno['id'];
+				echo($busqueda);
+				$sentencia1 = "SELECT * from mascotas where id_owner  = '$busqueda'";
+	    		$consulta1 = mysqli_query($conex, $sentencia1);
+				if(mysqli_num_rows($consulta1) > 0){
+					while($row = $consulta1->fetch_array()){
+						$_SESSION['pet']=$_SESSION['pet'].'<tr>
+	                                <th scope="row">'.$row['nombre']."</th>
+	                                <td>".$dueno['nombre']."</td>
+	                                <td>".$dueno['telefono']."</td>
+	                                <td class='mx-auto' style='width: 200px;'>
+	                            <button class='btn btn-outline-main mb-3' type='submit'>Modificar</button>
+	                            <button class='btn btn-outline-danger mb-3' type='button' onclick='eliminar()'>Eliminar</button>
+	                        </td>";
+					}
+	    			header("location: ../../p-clinico.php");
+				}else{
+					echo("Error");
+	    		}
+	    	}
+	        echo ($_SESSION['pet']);
 		}else{
 			echo("Error");
     	}
-		
     }
 ?>
