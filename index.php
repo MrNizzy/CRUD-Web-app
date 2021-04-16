@@ -21,13 +21,13 @@
                     <form action="assets/conection/login.php" method="get">
                         <div class="mb-3">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@correo.com" name="email">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@correo.com" name="email" required>
                                 <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mb-3 mb-4">
                             <div class="form-floating">
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="contraseña" name="password">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="contraseña" name="password" required>
                                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                             </div>
                         </div>

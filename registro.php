@@ -5,7 +5,7 @@
     <?php
     require_once('assets/layout/head.php')
     ?>
-    <title>Iniciar Sesión</title>
+    <title>Registrar cuenta</title>
 </head>
 
 <body>
@@ -18,16 +18,22 @@
                 <img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset="">
             </div>
             <div class="card-clr">
-                <form action="" method="">
+                <form action="assets/conection/usuario.php" method="get">
                     <div class="mb-3">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="ejemplo@correo.com" name="email">
+                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Cédula" name="cedula">
+                            <label for="exampleInputName1" class="form-label">Cédula</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Nombre" name="nombre">
                             <label for="exampleInputName1" class="form-label">Nombre</label>
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="exampleInputApellido1" aria-describedby="emailHelp" placeholder="ejemplo@correo.com" name="email">
+                            <input type="text" class="form-control" id="exampleInputApellido1" aria-describedby="emailHelp" placeholder="Apellido" name="apellido">
                             <label for="exampleInputApellido1" class="form-label">Apellido</label>
                         </div>
                     </div>
