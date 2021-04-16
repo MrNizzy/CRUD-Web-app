@@ -1,9 +1,7 @@
 <nav class="navbar fixed-top roboto-nav navbar-expand-md px-5 navbar-light bg-light text-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" style="padding-left: 2rem;" href="panel.php"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset=""
-                width="35" height="35"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="padding-left: 2rem;" href="panel.php"><img class="img-fluid" src="assets/image/paw.svg" alt="Huella" srcset="" width="35" height="35"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -15,20 +13,19 @@
                     <a class="nav-link" href="assets/conection/registro.php"><i class="fas fa-notes-medical"></i> Historial clínico</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-pen"></i> Registro
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                    class="fas fa-edit"></i> Crear registro</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-cash-register"></i> Nuevo procedimiento clínico</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#MascotaModal"><i class="fas fa-paw"></i> Nueva mascota</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#OwnerModal"><i class="fas fa-user-check"></i> Nuevo dueño</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="d-flex" style="padding-right: 2rem;">
                 <li class="navbar-nav nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i> Administra tu cuenta
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -49,55 +46,6 @@
 <div style="height: 4rem;">
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Crear registro clínico</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="" class="roboto">
-                    <div class="row mb-3">
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Nombre de usuario" required>
-                                <label for="formGroupExampleInput" class="form-label">Nombre del paciente</label>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <input type="mail" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Nombre de usuario" required>
-                                <label for="formGroupExampleInput" class="form-label">Correo de contacto</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Nombre de usuario" required>
-                                <label for="formGroupExampleInput" class="form-label">Nombre del responsable</label>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="Nombre de usuario" required>
-                                <label for="formGroupExampleInput" class="form-label">Número de contacto</label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" onclick="SaveSuccess()" class="btn btn-outline-main" data-bs-dismiss="modal">Guardar</button>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+    require_once('modals.php')
+?>
