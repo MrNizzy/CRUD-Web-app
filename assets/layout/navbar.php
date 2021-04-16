@@ -22,6 +22,9 @@
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#OwnerModal"><i class="fas fa-user-check"></i> Nuevo dueño</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="p-report.php"><i class="fas fa-scroll"></i> Reporte clínico</a>
+                </li>
             </ul>
             <div class="d-flex" style="padding-right: 2rem;">
                 <li class="navbar-nav nav-item dropdown">
