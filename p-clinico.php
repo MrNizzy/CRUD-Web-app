@@ -3,7 +3,8 @@
 
 <head>
     <?php
-    require_once('assets/layout/head.php')
+    require_once('assets/layout/head.php');
+    session_start();
     ?>
     <title>Historial clínico</title>
 </head>
@@ -32,7 +33,7 @@
 
     <div class="container historial-cli roboto mb-5">
         <h3 class="card-title text-center mb-5">Historial clínico de pacientes</h3>
-        <form>
+        <form action="assets/conection/registro.ph" method="get">
             <div class="d-flex justify-content-around">
                 <div class="d-flex gap-3 align-items-center">
                     <span class="color-claro" id="basic-addon1">Entradas </span>
@@ -46,7 +47,7 @@
                     <button class="btn btn-primary" type="submit">Aplicar</button>
                 </div>
                 <div class="d-flex gap-3 align-items-center">
-                    <input class="form-control" type="search" placeholder="Buscar paciente" aria-label="Buscar">
+                    <input class="form-control" name="busqueda" type="search" placeholder="Buscar paciente" aria-label="Buscar">
                     <button class="btn btn-primary" type="submit">Buscar</button>
                 </div>
                 
@@ -63,33 +64,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">Misifus</th>
-                        <td>Mark Zucaritas</td>
-                        <td>+57 31012345678</td>
-                        <td class="mx-auto" style="width: 200px;">
+                    <?php
+                    if($_SESSION['pet']!=false){
+                        echo($_SESSION['pet']);
+                    }else{ ?><tr>
+                                <th scope="row">null</th>
+                                <td>null</td>
+                                <td>null</td>
+                                <td class="mx-auto" style="width: 200px;">
                             <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Garfield</th>
-                        <td>Jacob Smith</td>
-                        <td>+57 3202556060</td>
-                        <td>
-                            <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Súper Can</th>
-                        <td>Larry the Bird</td>
-                        <td>+57 3163002020</td>
-                        <td>
-                            <button class="btn btn-outline-main mb-3" type="submit">Modificar</button>
-                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button>
-                        </td>
-                    </tr>
+                            <button class="btn btn-outline-danger mb-3" type="button" onclick="eliminar()">Eliminar</button><?php } ?>
                 </tbody>
             </table>
         </div>

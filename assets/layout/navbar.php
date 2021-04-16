@@ -12,7 +12,7 @@
                     <a class="nav-link" aria-current="page" href="panel.php"><i class="fas fa-home"></i> Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="p-clinico.php"><i class="fas fa-notes-medical"></i> Historial clínico</a>
+                    <a class="nav-link" href="assets/conection/registro.php"><i class="fas fa-notes-medical"></i> Historial clínico</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

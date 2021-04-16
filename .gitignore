@@ -1,3 +1,5 @@
+#conexión bd
+conection.php
 # Logs
 logs
 *.log

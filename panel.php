@@ -3,7 +3,8 @@
 
 <head>
     <?php
-    require_once('assets/layout/head.php')
+    require_once('assets/layout/head.php'); 
+    session_start();
     ?>
     <title>Inicio</title>
 </head>
@@ -44,7 +45,7 @@
                     magni similique. Soluta et laborum placeat! Fugiat labore nisi dolor voluptas voluptate, sit aliquid
                     libero quia quos laboriosam fuga? Delectus nam, possimus facere error et voluptatum ea hic
                     temporibus consequatur quod rerum expedita harum quia nemo.</p>
-                <a href="p-clinico.php" class="btn btn-primary">Consultar registros clínicos</a>
+                <a href="assets/conection/registro.php" class="btn btn-primary">Consultar registros clínicos</a>
             </div>
             <div class="card-footer text-muted">
                 Veterinaria
