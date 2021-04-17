@@ -28,7 +28,8 @@
 					    $consultaowner = mysqli_query($conex, $sqlowner);
 						$arrayowner = mysqli_fetch_array($consultaowner);
 						if(mysqli_num_rows($consultaowner) > 0){
-							/**/$_SESSION['pdf']=$_SESSION['pdf'].";".$arraymascota['nombre'].";".$arrayowner['nombre'].";".$arrayprocedimiento['procedimiento'].";".$arrayprocedimiento['medicamentos'].";".$row['fecha'].";".$row['costo']."\n";					
+							$enlace="onclick='location.href=assets/conection/pdf.php'";
+							/**/$_SESSION['pdf']=$_SESSION['pdf'].$arraymascota['nombre'].";".$arrayowner['nombre'].";".$arrayprocedimiento['procedimiento'].";".$arrayprocedimiento['medicamentos'].";".$row['fecha'].";".$row['costo']."\n";					
 							$_SESSION['factura']=$_SESSION['factura']."<tr><th scope='row'>".$arraymascota['nombre']."</th>
 	                        <td>".$arrayowner['nombre']."</td>
 	                        <td>".$arrayprocedimiento['procedimiento']."</td>
@@ -36,12 +37,15 @@
 	                        <td>".$row['fecha']."</td>
 	                        <td>".$row['costo']."</td>
 	                        <td class='mx-auto' style='width: 200px;'>
-	                            <button class='btn btn-outline-success mb-3' type='submit'>Descargar reporte</button>
+	                            <button class='btn btn-outline-success mb-3' type='submit' ".$enlace.">Descargar reporte</button>
 	                        </td></tr>";
 	                    }
 	                }
 	            }
 	        }
+			$fp = fopen("reporte.txt", "w");
+			fputs($fp, $_SESSION['pdf']);
+			fclose($fp);
 	    	header("location: ../../p-report.php");
 	    }
     }
