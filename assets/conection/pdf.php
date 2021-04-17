@@ -9,6 +9,20 @@ $pdf->Output();*/
 
 class PDF extends FPDF
 {
+
+    function Header()
+{
+    // Logo
+    $this->Image('logo.png',10,6,30);
+    // Arial bold 15
+    $this->SetFont('Arial','B',15);
+    // Move to the right
+    $this->Cell(80);
+    // Title
+    $this->Cell(60,10,'Factura Acme Inc.',1,0,'C');
+    // Line break
+    $this->Ln(20);
+}
 // Cargar los datos
 function LoadData($file)
 {
@@ -52,6 +66,8 @@ function ImprovedTable($header, $data)
         $this->Cell($w[1],6,$row[1],'LR');
         $this->Cell($w[2],6,$row[2],'LR');//number_format($row[2]),'LR',0,'R');
         $this->Cell($w[3],6,$row[3],'LR');//number_format($row[3]),'LR',0,'R');
+        $this->Cell($w[4],6,$row[4],'LR');
+        $this->Cell($w[5],6,$row[5],'LR');
         $this->Ln();
     }
     // Línea de cierre
@@ -82,8 +98,10 @@ function FancyTable($header, $data)
     {
         $this->Cell($w[0],6,$row[0],'LR',0,'L',$fill);
         $this->Cell($w[1],6,$row[1],'LR',0,'L',$fill);
-        $this->Cell($w[2],6,$row[1],'LR',0,'L',$fill);//number_format($row[2]),'LR',0,'R',$fill);
-        $this->Cell($w[3],6,$row[1],'LR',0,'L',$fill);//number_format($row[3]),'LR',0,'R',$fill);
+        $this->Cell($w[2],6,$row[2],'LR',0,'L',$fill);//number_format($row[2]),'LR',0,'R',$fill);
+        $this->Cell($w[3],6,$row[3],'LR',0,'L',$fill);//number_format($row[3]),'LR',0,'R',$fill);
+        $this->Cell($w[4],6,$row[4],'LR',0,'L',$fill);//number_format($row[2]),'LR',0,'R',$fill);
+        $this->Cell($w[5],6,$row[5],'LR',0,'L',$fill);//number_format($row[3]),'LR',0,'R',$fill);
         $this->Ln();
         $fill = !$fill;
     }
