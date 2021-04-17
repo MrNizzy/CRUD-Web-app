@@ -4,7 +4,10 @@
 <head>
     <?php
     require_once('assets/layout/head.php');
-    session_start();
+        session_start();
+        if($_SESSION['log']==false){
+            header("location: inicio.php");
+        }
     ?>
     <title>Historial clínico</title>
 </head>

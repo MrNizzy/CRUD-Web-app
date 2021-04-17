@@ -16,6 +16,7 @@
 			if($array['password_usuario']==$pass){
 				echo("conectado");
 				$_SESSION['cc'] = $array['id'];
+				$_SESSION['log']=true;
 				echo ($_SESSION['cc']);
 				header("location: ../../panel.php");
 			}else{
