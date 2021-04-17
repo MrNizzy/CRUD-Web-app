@@ -4,10 +4,6 @@
 <head>
     <?php
     require_once('assets/layout/head.php');
-        session_start();
-        if($_SESSION['log']==false){
-            header("location: inicio.php");
-        }
     ?>
     <title>Registrar cuenta</title>
 </head>

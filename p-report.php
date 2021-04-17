@@ -64,6 +64,7 @@
                         <th scope="col">Nombre paciente</th>
                         <th scope="col">Nombre dueño</th>
                         <th scope="col">Procedimiento</th>
+                        <th scope="col">Medicamentos</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Costo</th>
                         <th scope="col">Acciones</th>
@@ -71,20 +72,7 @@
                 </thead>
                 <tbody>
                         <?php
-                            if($_SESSION['factura']==false){
-                        ?>
-                            <tr>
-                                <th scope="row">null</th>
-                                <td>null</td>
-                                <td>null</td>
-                                <td>null</td>
-                                <td>null</td>
-                                <td class="mx-auto" style="width: 200px;">
-                                <button class="btn btn-outline-success mb-3" type="submit">Descargar reporte</button>
-                                </td>
-                            </tr>
-                        <?php
-                            }else{
+                            if($_SESSION['factura']!=false){
                                 echo $_SESSION['factura'];
                             }
                         ?>

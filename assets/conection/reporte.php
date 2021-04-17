@@ -30,6 +30,7 @@
 							$_SESSION['factura']=$_SESSION['factura']."<tr><th scope='row'>".$arraymascota['nombre']."</th>
 	                        <td>".$arrayowner['nombre']."</td>
 	                        <td>".$arrayprocedimiento['procedimiento']."</td>
+	                        <td>".$arrayprocedimiento['medicamentos']."</td>
 	                        <td>".$row['fecha']."</td>
 	                        <td>".$row['costo']."</td>
 	                        <td class='mx-auto' style='width: 200px;'>
