@@ -11,7 +11,7 @@
     }else{
 		$sql = "INSERT INTO procedimiento (id_mascota, medicamentos, procedimiento, id_veterinario) VALUES ('$mascota','$medicamentos','$procedimientos','$veterinario')";
 		if (mysqli_query($conex, $sql)) {
-  			//header("location: ../../index.php");
+  			header("location: ../../panel.php");
 		} else {
   			echo "Error: " . $sql . "<br>" . mysqli_error($conex);
 		}

@@ -18,6 +18,7 @@
                                     <option selected>Asignar mascota</option>
                                     <?php 
                                         include ("assets/conection/listasprocedimiento.php"); 
+                                        echo $listaprocedimientos;
                                     ?>
                                 </select>
                             </div>
@@ -53,7 +54,7 @@
 <div class="modal fade" id="OwnerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <form action="" class="roboto">
+            <form action="assets/conection/dueno.php" method="get" class="roboto">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Agregar nuevo dueño.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -62,13 +63,13 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formNombreInput" placeholder="Nombre del dueño" required>
+                                <input type="text" class="form-control" id="formNombreInput" placeholder="Nombre del dueño" required name="nombre">
                                 <label for="formNombreInput" class="form-label">Nombre</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formApellidoInput" placeholder="Apellido del dueño" required>
+                                <input type="text" class="form-control" id="formApellidoInput" placeholder="Apellido del dueño" required name="apellido">
                                 <label for="formApellidoInput" class="form-label">Apellido</label>
                             </div>
                         </div>
@@ -76,13 +77,13 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="mail" class="form-control" id="formGroupExampleInput" placeholder="Nombre de usuario" required>
+                                <input type="mail" class="form-control" id="formGroupExampleInput" placeholder="Email de usuario" required name="email">
                                 <label for="formGroupExampleInput" class="form-label">Correo de contacto</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="formTelefonoInput" placeholder="Teléfono">
+                                <input type="number" class="form-control" id="formTelefonoInput" placeholder="Teléfono" name="telefono">
                                 <label for="formTelefonoInput" class="form-label">Teléfono</label>
                             </div>
                         </div>
@@ -90,7 +91,7 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formCedulaInput" placeholder="Cédula" required>
+                                <input type="text" class="form-control" id="formCedulaInput" placeholder="Cédula" required name="cc">
                                 <label for="formCedulaInput" class="form-label">Cédula</label>
                             </div>
                         </div>
@@ -98,7 +99,7 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formDireccionInput" placeholder="Dirección">
+                                <input type="text" class="form-control" id="formDireccionInput" placeholder="Dirección" name="direccion">
                                 <label for="formDireccionInput" class="form-label">Dirección</label>
                             </div>
                         </div>
@@ -106,7 +107,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" onclick="SaveSuccess()" class="btn btn-outline-main" data-bs-dismiss="modal">Guardar</button>
+                    <button  class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>
@@ -117,7 +118,7 @@
 <div class="modal fade" id="MascotaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <form action="" class="roboto">
+            <form action="assets/conection/mascota.php" method="get" class="roboto">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Agregar nueva mascota.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -126,13 +127,13 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formNombreInput" placeholder="Nombre del dueño" required>
+                                <input type="text" class="form-control" id="formNombreInput" placeholder="Nombre del dueño" required name="nombre">
                                 <label for="formNombreInput" class="form-label">Nombre</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="date" class="form-control" id="formNacimientoInput" placeholder="Fecha nacimiento" required>
+                                <input type="date" class="form-control" id="formNacimientoInput" placeholder="Fecha nacimiento" required name="fecha">
                                 <label for="formNacimientoInput" class="form-label">Fecha nacimiento</label>
                             </div>
                         </div>
@@ -140,13 +141,13 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formTipoInput" placeholder="Tipo animal (ej. Gato)" required>
+                                <input type="text" class="form-control" id="formTipoInput" placeholder="Tipo animal (ej. Gato)" required name="tipo">
                                 <label for="formTipoInput" class="form-label">Tipo animal (ej. Gato)</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formRazaInput" placeholder="Raza">
+                                <input type="text" class="form-control" id="formRazaInput" placeholder="Raza" name="raza">
                                 <label for="formRazaInput" class="form-label">Raza</label>
                             </div>
                         </div>
@@ -154,23 +155,23 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="formSangreInput" placeholder="Tipo de sangre" required>
+                                <input type="text" class="form-control" id="formSangreInput" placeholder="Tipo de sangre" required name="sangre">
                                 <label for="formSangreInput" class="form-label">Tipo de sangre</label>
                             </div>
                         </div>
                         <div class="col-md">
-                            <select class="form-select roboto color-claro p-3" aria-label="Asignar un dueño">
+                            <select class="form-select roboto color-claro p-3" aria-label="Asignar un dueño" name="dueno">
                                 <option selected>Asignar dueño</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                    <?php 
+                                        echo($listaduenos);
+                                    ?>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" onclick="SaveSuccess()" class="btn btn-outline-main" data-bs-dismiss="modal">Guardar</button>
+                    <button  class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>

@@ -31,6 +31,17 @@
 		}else{
 			echo("Error");
 	    }
+		$listaprocedimientos= $_SESSION['list'];
+		$sentencia = "SELECT * from owner";
+	    $consulta = mysqli_query($conex, $sentencia);
+		$_SESSION['list']="";
+		if(mysqli_num_rows($consulta) > 0){
+			while($row = $consulta->fetch_array()){
+				$_SESSION['list']=$_SESSION['list']."<option value='".$row['id']."'>".$row['nombre']."</option>";
+			}
+		}else{
+			echo("Error");
+	    }
+	    $listaduenos=$_SESSION['list'];
 	}
-	echo $_SESSION['list'];
 ?>
