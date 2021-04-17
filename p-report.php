@@ -4,10 +4,10 @@
 <head>
     <?php
     require_once('assets/layout/head.php');
-        session_start();
-        if($_SESSION['log']==false){
-            header("location: inicio.php");
-        }
+    session_start();
+    if ($_SESSION['log'] == false) {
+        header("location: inicio.php");
+    }
     ?>
     <title>Reporte clínico</title>
 </head>
@@ -36,7 +36,51 @@
 
     <div class="container historial-cli roboto mb-5">
         <h3 class="card-title text-center mb-5">Reporte clínico de pacientes</h3>
-        
+        <form action="">
+            <div class="row mb-3">
+                <div class="col-md d-flex gap-5 justify-content-evenly">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="formFInicialInput" placeholder="Fecha inicial" required name="fecha">
+                        <label for="formFInicialInput" class="form-label">Fecha inicial</label>
+                    </div>
+                    <p class="align-self-center">Hasta</p>
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="formFFinalInput" placeholder="Fecha final" required name="fecha">
+                        <label for="formFFinalInput" class="form-label">Fecha final</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" type="submit">Aplicar filtro por fechas</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive mt-3">
+            <table class="table color-claro table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre paciente</th>
+                        <th scope="col">Nombre dueño</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Costo</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">null</th>
+                        <td>null</td>
+                        <td>null</td>
+                        <td>null</td>
+                        <td class="mx-auto" style="width: 200px;">
+                            <button class="btn btn-outline-success mb-3" type="submit">Descargar reporte</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <?php
