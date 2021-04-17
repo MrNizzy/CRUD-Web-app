@@ -20,6 +20,7 @@
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-cash-register"></i> Nuevo procedimiento clínico</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#MascotaModal"><i class="fas fa-paw"></i> Nueva mascota</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#OwnerModal"><i class="fas fa-user-check"></i> Nuevo dueño</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#FacturaModal"><i class="fas fa-calendar"></i> Nueva factura</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

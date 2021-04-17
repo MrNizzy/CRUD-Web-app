@@ -1,5 +1,5 @@
 <?php
-    //$path = getcwd();
+//$path = getcwd();
 ?>
 <!-- Modal crear procedimiento -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -16,9 +16,9 @@
                             <div class="col-md">
                                 <select class="form-select roboto color-claro p-3" aria-label="Asignar una mascota" name="mascota">
                                     <option selected>Asignar mascota</option>
-                                    <?php 
-                                        include ("assets/conection/listasprocedimiento.php"); 
-                                        echo $listaprocedimientos;
+                                    <?php
+                                    include("assets/conection/listasprocedimiento.php");
+                                    echo $listaprocedimientos;
                                     ?>
                                 </select>
                             </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button  class="btn btn-outline-main" name="save">Guardar</button>
+                    <button class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button  class="btn btn-outline-main" name="save">Guardar</button>
+                    <button class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>
@@ -162,16 +162,57 @@
                         <div class="col-md">
                             <select class="form-select roboto color-claro p-3" aria-label="Asignar un dueño" name="dueno">
                                 <option selected>Asignar dueño</option>
-                                    <?php 
-                                        echo($listaduenos);
-                                    ?>
+                                <?php
+                                echo ($listaduenos);
+                                ?>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button  class="btn btn-outline-main" name="save">Guardar</button>
+                    <button class="btn btn-outline-main" name="save">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal crear factura -->
+<div class="modal fade" id="FacturaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <form action="" method="get" class="roboto">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Crear nueva factura.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md">
+                            <select class="form-select roboto color-claro p-3" aria-label="Asignar un procedimiento" name="procedimiento">
+                                <option selected>Asignar procedimiento</option>
+                            </select>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="formNacimientoInput" placeholder="Costo" required name="costo" maxlength="9">
+                                <label for="formNacimientoInput" class="form-label">Costo ($)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="formFechaInput" placeholder="Fecha de la factura" required name="fecha">
+                                <label for="formFechaInput" class="form-label">Fecha de la factura</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>
