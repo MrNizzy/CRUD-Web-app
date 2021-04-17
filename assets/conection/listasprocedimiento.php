@@ -43,5 +43,17 @@
 			echo("Error");
 	    }
 	    $listaduenos=$_SESSION['list'];
+
+		$sentencia = "SELECT * from procedimiento";
+	    $consulta = mysqli_query($conex, $sentencia);
+		$_SESSION['list']="";
+		if(mysqli_num_rows($consulta) > 0){
+			while($row = $consulta->fetch_array()){
+				$_SESSION['list']=$_SESSION['list']."<option value='".$row['id']."'>".$row['procedimiento']."</option>";
+			}
+		}else{
+			echo("Error");
+	    }
+	    $listaprocedimiento=$_SESSION['list'];
 	}
 ?>

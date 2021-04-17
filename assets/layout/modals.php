@@ -182,7 +182,7 @@
 <div class="modal fade" id="FacturaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <form action="" method="get" class="roboto">
+            <form action="assets/conection/factura.php" method="get" class="roboto">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Crear nueva factura.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -192,6 +192,9 @@
                         <div class="col-md">
                             <select class="form-select roboto color-claro p-3" aria-label="Asignar un procedimiento" name="procedimiento">
                                 <option selected>Asignar procedimiento</option>
+                                <?php                                
+                                    echo $listaprocedimiento;
+                                ?>
                             </select>
                         </div>
                         <div class="col-md">
