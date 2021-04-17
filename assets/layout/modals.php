@@ -1,8 +1,11 @@
+<?php
+    //$path = getcwd();
+?>
 <!-- Modal crear procedimiento -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <form action="" class="roboto">
+            <form action="assets/conection/procedimiento.php" method="get" class="roboto">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-edit"></i> Agregar nuevo procedimiento clínico.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -11,21 +14,11 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="col-md">
-                                <select class="form-select roboto color-claro p-3" aria-label="Asignar una mascota">
+                                <select class="form-select roboto color-claro p-3" aria-label="Asignar una mascota" name="mascota">
                                     <option selected>Asignar mascota</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="col-md">
-                                <select class="form-select roboto color-claro p-3" aria-label="Asignar un veterinario">
-                                    <option selected>Asignar veterinario</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <?php 
+                                        include ("assets/conection/listasprocedimiento.php"); 
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -33,7 +26,7 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Escribe los medicamentos" id="floatingMedicamentos" maxlength="500"></textarea>
+                                <textarea class="form-control" placeholder="Escribe los medicamentos" id="floatingMedicamentos" maxlength="500" name="medicamentos"></textarea>
                                 <label for="floatingMedicamentos">Listado de medicamentos.</label>
                             </div>
                         </div>
@@ -41,7 +34,7 @@
                     <div class="row mb-3">
                         <div class="col-md">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Escribe el procedimiento" id="floatingProcedimiento" maxlength="700"></textarea>
+                                <textarea class="form-control" placeholder="Escribe el procedimiento" id="floatingProcedimiento" maxlength="700" name="procedimientos"></textarea>
                                 <label for="floatingProcedimiento">Procedimiento realizado.</label>
                             </div>
                         </div>
@@ -49,7 +42,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" onclick="SaveSuccess()" class="btn btn-outline-main" data-bs-dismiss="modal">Guardar</button>
+                    <button  class="btn btn-outline-main" name="save">Guardar</button>
                 </div>
             </form>
         </div>

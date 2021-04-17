@@ -5,8 +5,8 @@
 	$conex=Conectarse();
     if($conex==false){
     	echo("error");
-    }else{    	
-    	$sentencia = "SELECT * from owner";
+    }else{  
+		$sentencia = "SELECT * from owner";
     	$consulta = mysqli_query($conex, $sentencia);
 		$_SESSION['pet']="";
 		if(mysqli_num_rows($consulta) > 0){			
