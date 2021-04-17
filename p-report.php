@@ -36,16 +36,16 @@
 
     <div class="container historial-cli roboto mb-5">
         <h3 class="card-title text-center mb-5">Reporte clínico de pacientes</h3>
-        <form action="">
+        <form action="assets/conection/reporte.php" method="get">
             <div class="row mb-3">
                 <div class="col-md d-flex gap-5 justify-content-evenly">
                     <div class="form-floating">
-                        <input type="date" class="form-control" id="formFInicialInput" placeholder="Fecha inicial" required name="fecha">
+                        <input type="date" class="form-control" id="formFInicialInput" placeholder="Fecha inicial" required name="fecha1">
                         <label for="formFInicialInput" class="form-label">Fecha inicial</label>
                     </div>
                     <p class="align-self-center">Hasta</p>
                     <div class="form-floating">
-                        <input type="date" class="form-control" id="formFFinalInput" placeholder="Fecha final" required name="fecha">
+                        <input type="date" class="form-control" id="formFFinalInput" placeholder="Fecha final" required name="fecha2">
                         <label for="formFFinalInput" class="form-label">Fecha final</label>
                     </div>
                 </div>
@@ -63,21 +63,31 @@
                     <tr>
                         <th scope="col">Nombre paciente</th>
                         <th scope="col">Nombre dueño</th>
+                        <th scope="col">Procedimiento</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Costo</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">null</th>
-                        <td>null</td>
-                        <td>null</td>
-                        <td>null</td>
-                        <td class="mx-auto" style="width: 200px;">
-                            <button class="btn btn-outline-success mb-3" type="submit">Descargar reporte</button>
-                        </td>
-                    </tr>
+                        <?php
+                            if($_SESSION['factura']==false){
+                        ?>
+                            <tr>
+                                <th scope="row">null</th>
+                                <td>null</td>
+                                <td>null</td>
+                                <td>null</td>
+                                <td>null</td>
+                                <td class="mx-auto" style="width: 200px;">
+                                <button class="btn btn-outline-success mb-3" type="submit">Descargar reporte</button>
+                                </td>
+                            </tr>
+                        <?php
+                            }else{
+                                echo $_SESSION['factura'];
+                            }
+                        ?>
                 </tbody>
             </table>
         </div>

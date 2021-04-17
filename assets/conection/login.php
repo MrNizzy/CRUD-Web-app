@@ -5,6 +5,7 @@
 	$pass = $_GET['password'];
 	$_SESSION['pet']=false;
 	$_SESSION['dueno']=false;
+	$_SESSION['factura']=false;
 	$conex=Conectarse();
     if($conex==false){
     	echo("error");
